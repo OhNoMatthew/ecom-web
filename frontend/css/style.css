@@ -112,31 +112,31 @@
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    padding: 0 20px;
+    padding: 0;
   }
 
   .navbar__menu {
     display: flex;
-    grid-template-columns: auto;
+    flex-direction: column;
     margin: 0;
     width: 100%;
     position: absolute;
     /* top: -1000px;
     opacity: 0; */
     transition: all 0.5s ease;
-    height: auto;
+    height: 50vh;
     z-index: -1;
     background: #131313;
   }
 
   .navbar__menu.active {
     background: #131313;
-    top: 100%;
+    top: 80px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
     height: 50vh;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   #nav__logo {
@@ -185,5 +185,17 @@
   .navbar__toggle .bar {
     display: block;
     cursor: pointer;
+  }
+
+  #mobile-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
